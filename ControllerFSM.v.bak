@@ -1,0 +1,38 @@
+//register file
+module reg_file(
+output wire LoadIR,
+output wire IncPC,
+output wire SelPC,
+output wire LoadPC,
+output wire LoadReg,
+output wire LoadAcc,
+output wire [1:0] SelAcc,
+output wire [3:0] SelALU,
+
+
+input wire Z,
+input wire C,
+input wire [3:0] Opcode,
+
+input wire CLK,
+input wire CLB,
+);
+
+
+
+//reg [7:0] memory[15:0];
+//integer i;
+//
+//always @(posedge clk or CLB)
+//begin
+//	if(CLB == 1'b0) begin
+//		for(i = 0; i < 15; i = i + 1) memory[i][7:0] = 0;
+//	end
+//	else begin
+//		if (LoadReg == 1'b1) memory[RegAddr] <= reg_in;
+//	end	
+//end
+//
+//assign reg_out = memory[RegAddr];
+
+endmodule
