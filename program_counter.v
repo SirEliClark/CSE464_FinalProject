@@ -27,6 +27,6 @@ begin
 			pc <= IncPC? (pc + 1) : pc;
 		end
 	end
-end
+end 
 
 endmodule

@@ -1,9 +1,11 @@
 
-module ALU (a, b, ALU_sel, load_shift, result, cout, zout);
+module ALU (
 input [7:0] a, b;
 input [1:0] ALU_sel, load_shift;
+
 output[7:0] result;
 output cout, zout;
+);
 
 wire cout, zout;
 reg [8:0] r;

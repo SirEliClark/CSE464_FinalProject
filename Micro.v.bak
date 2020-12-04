@@ -6,7 +6,6 @@ output wire [7:0] ACC,
 input wire [7:0] INST,
 input wire clk,
 input wire CLB,
-
 );
 
 ControllerFSM dut(

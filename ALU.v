@@ -9,6 +9,8 @@ output cout, zout;
 
 wire cout, zout;
 reg [8:0] r;
+reg rC;
+reg rZ;
 
 always @(a or b or ALU_sel or load_shift) begin
 	case(ALU_sel) 
@@ -25,11 +27,14 @@ always @(a or b or ALU_sel or load_shift) begin
 		end
 		/****Complete the code here*****/
 	endcase
+	rC <= r[8];
+	zC <= (r[7:0] == 0) ? 1:0;
+
 end
 
-assign cout = r[8];
+assign cout = rC;//r[8];
 assign result = r[7:0]; /*Complete the code here***/
-assign zout = (r[7:0] == 0) ? 1:0; /*Complete the code here*/
+assign zout = zC; //(r[7:0] == 0) ? 1:0; /*Complete the code here*/
 
 endmodule
 
