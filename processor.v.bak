@@ -72,7 +72,7 @@ ACC dut(
 
 	//Inputs
 	.ALU(wALU_out),
-	.reg_file(wReg),
+	.reg_file(),
 	.imm(wI[3:0]),
 	.SelAcc(wSelAcc),
 	.loadAcc(wLoadAcc),

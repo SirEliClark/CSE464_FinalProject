@@ -9,7 +9,7 @@ input wire[3:0] imm,
 input wire [1:0] SelAcc,
 input wire loadAcc,
 input wire clk,
-input wire CLB,
+input wire CLB
 
 );
 
@@ -23,8 +23,9 @@ always @ (posedge clk or CLB) begin
 		2'b00: r_acc_out <= ALU;
 		2'b01: r_acc_out <= reg_file;
 		2'b10: r_acc_out <= {4'b0,imm};
-		2'b11: // nothing 
+		//2'b11: begin end
 	endcase
    end
 
-end
+end 
+endmodule

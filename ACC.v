@@ -23,8 +23,8 @@ always @ (posedge clk or CLB) begin
 		2'b00: r_acc_out <= ALU;
 		2'b01: r_acc_out <= reg_file;
 		2'b10: r_acc_out <= {4'b0,imm};
-		2'b11: // nothing 
 	endcase
    end
 
-end
+end 
+endmodule

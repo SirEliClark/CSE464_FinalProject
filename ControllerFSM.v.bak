@@ -18,6 +18,24 @@ input wire CLB
 );
 
 //reg [11:0] instr;
+reg rLoadIR;
+reg rIncPC;
+reg rSelPC;
+reg rLoadPC;
+reg rLoadReg;
+reg rLoadAcc;
+reg [1:0] rSelAcc;
+reg [3:0] rSelALU;
+
+assign LoadIR = rLoadIR;
+assign IncPC = rIncPC;
+assign SelPC = rSelPC;
+assign LoadPC = rLoadPC;
+assign LoadReg = rLoadReg;
+assign LoadAcc = rLoadAcc;
+assign SelAcc = rSelAcc;
+assign SelALU = rSelALU;
+
 
 always @(posedge clk or CLB) 
 begin
@@ -163,8 +181,6 @@ begin
 		 //LoadIR will be taken care of in Micro.v
 		 end
     endcase
-        
-	
 end
 endmodule
 
