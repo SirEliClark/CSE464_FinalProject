@@ -1,13 +1,12 @@
 
 module ALU (
-input [7:0] a, b;
-input [1:0] ALU_sel, load_shift;
+input [7:0] a, b,
+input [1:0] ALU_sel, load_shift,
 
-output[7:0] result;
-output cout, zout;
+output[7:0] result,
+output wire cout, zout
 );
 
-wire cout, zout;
 reg [8:0] r;
 reg rC;
 reg rZ;
@@ -28,13 +27,13 @@ always @(a or b or ALU_sel or load_shift) begin
 		/****Complete the code here*****/
 	endcase
 	rC <= r[8];
-	zC <= (r[7:0] == 0) ? 1:0;
+	rZ <= (r[7:0] == 0) ? 1:0;
 
 end
 
 assign cout = rC;//r[8];
 assign result = r[7:0]; /*Complete the code here***/
-assign zout = zC; //(r[7:0] == 0) ? 1:0; /*Complete the code here*/
+assign zout = rZ; //(r[7:0] == 0) ? 1:0; /*Complete the code here*/
 
 endmodule
 

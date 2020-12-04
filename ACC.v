@@ -9,7 +9,7 @@ input wire[3:0] imm,
 input wire [1:0] SelAcc,
 input wire loadAcc,
 input wire clk,
-input wire CLB,
+input wire CLB
 
 );
 
