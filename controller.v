@@ -27,9 +27,10 @@ reg rLoadReg;
 reg rLoadAcc;
 reg [1:0] rSelAcc;
 reg [3:0] rSelALU;
+reg [1:0] state;
 
 assign LoadIR = rLoadIR;
-assign IncPC = rIncPC;
+assign IncPC = ~rLoadIR;
 assign SelPC = rSelPC;
 assign LoadPC = rLoadPC;
 assign LoadReg = rLoadReg;
@@ -39,86 +40,107 @@ assign SelALU = rSelALU;
 
 
 
-always @(posedge clk)begin
-	if (CLB ==1'b1) begin
-		rLoadIR <= ~rLoadIR;
+//always @(negedge clk)begin
+//	if (CLB ==1'b1) begin
+//		rLoadIR <= ~rLoadIR;
+//	end
+//end
+
+always @(posedge clk or CLB) begin 
+	if(CLB == 1'b0)
+	     state <= 2'b00;
+	else begin
+	    case(state) 
+		2'b00: begin 
+			state <= 2'b01;
+			rLoadIR <= 2'b1;
+		end
+		2'b01: begin 
+			state <= 2'b10;
+			rLoadIR <= 1'b0;
+		end
+		2'b10: begin 
+			state <= 2'b01;
+			rLoadIR <=1'b1;
+		end
+	    endcase	
 	end
+
 end
 
-always @(posedge clk or CLB) 
-if(CLB == 1'b0)begin 
-	rLoadIR <= 1'b0;
-	rSelALU <= 4'b0;
-	rSelAcc <= 2'b00;
-	rLoadAcc <= 1'b0;
-	rLoadReg <= 1'b0;
-	rLoadPC <= 1'b0;
-	rSelPC <= 1'b0;
-	rIncPC <= 1'b0;
-end
-else
-begin
-    case(Opcode)
-	4'b0000: begin//DO NOTHING
-		 end
-	4'b0001: begin rSelALU <= 4'b1000; //ADD 
-		 rSelAcc <= 2'b00;
-		 rLoadAcc <= 1'b1;
-		 rLoadReg <= 1'b0;
-		 rLoadPC <= 1'b0;
-		 rSelPC <= 1'b0;
-		 rIncPC <= 1'b1;
-		 //LoadIR will be taken care of in Micro.v
-		 end
-	4'b0010: begin rSelALU <= 4'b1100; //SUB 
-		 rSelAcc <= 2'b00;
-		 rLoadAcc <= 1'b1;
-		 rLoadReg <= 1'b0;
-		 rLoadPC <= 1'b0;
-		 rSelPC <= 1'b0;
-		 rIncPC <= 1'b1;
-		 //LoadIR will be taken care of in Micro.v
-		 end
-	4'b0011: begin rSelALU <= 4'b0100; //NOR 
-		 rSelAcc <= 2'b00;
-		 rLoadAcc <= 1'b1;
-		 rLoadReg <= 1'b0;
-		 rLoadPC <= 1'b0;
-		 rSelPC <= 1'b0;
-		 rIncPC <= 1'b1;
-		 //LoadIR will be taken care of in Micro.v
-		 end
-	4'b0100: begin rSelALU <= 4'b0000; // Move rs 
-		 rSelAcc <= 2'b01;
-		 rLoadAcc <= 1'b1;
-		 rLoadReg <= 1'b0;
-		 rLoadPC <= 1'b0;
-		 rSelPC <= 1'b0;
-		 rIncPC <= 1'b1;
-		 //LoadIR
-		 end
-	4'b0101: begin rSelALU <= 4'b0000;// Move rd
+always @(*) begin
+    case (state) 
+	2'b00: begin
+		 rSelALU <= 4'b0000;
 		 rSelAcc <= 2'b00;
 		 rLoadAcc <= 1'b0;
-		 rLoadReg <= 1'b1;
+		 rLoadReg <= 1'b0;
 		 rLoadPC <= 1'b0;
 		 rSelPC <= 1'b0;
-		 rIncPC <= 1'b1;
+		 rIncPC <= 1'b0;
+		 rLoadIR <= 1'b0;
+	end
+	2'b01: begin
+	    case(Opcode)
+		4'b0000: begin//DO NOTHING
+		end
+		4'b0001: begin rSelALU <= 4'b1000; //ADD 
+			 rSelAcc <= 2'b00;
+			 rLoadAcc <= 1'b1;
+			 rLoadReg <= 1'b0;
+			 rLoadPC <= 1'b0;
+			 rSelPC <= 1'b0;
+			 rIncPC <= 1'b1;
+			 //LoadIR will be taken care of in Micro.v
+		end
+		4'b0010: begin rSelALU <= 4'b1100; //SUB 
+		 	rSelAcc <= 2'b00;
+		 	rLoadAcc <= 1'b1;
+		 	rLoadReg <= 1'b0;
+		 	rLoadPC <= 1'b0;
+		 	rSelPC <= 1'b0;
+		 	rIncPC <= 1'b1;
+		 //LoadIR will be taken care of in Micro.v
+		end
+		4'b0011: begin rSelALU <= 4'b0100; //NOR 
+		 	rSelAcc <= 2'b00;
+		 	rLoadAcc <= 1'b1;
+		 	rLoadReg <= 1'b0;
+		 	rLoadPC <= 1'b0;
+		 	rSelPC <= 1'b0;
+		 	rIncPC <= 1'b1;
+		 	//LoadIR will be taken care of in Micro.v
+		end
+		4'b0100: begin rSelALU <= 4'b0000; // Move rs 
+		 	rSelAcc <= 2'b01;
+		 	rLoadAcc <= 1'b1;
+		 	rLoadReg <= 1'b0;
+		 	rLoadPC <= 1'b0;
+		 	rSelPC <= 1'b0;
+		 	rIncPC <= 1'b1;
+		 	//LoadIR
+		end
+		4'b0101: begin rSelALU <= 4'b0000;// Move rd
+		 	rSelAcc <= 2'b00;
+		 	rLoadAcc <= 1'b0;
+		 	rLoadReg <= 1'b1;
+		 	rLoadPC <= 1'b0;
+		 	rSelPC <= 1'b0;
+		 	rIncPC <= 1'b1;
 		 //LoadIR
-		 end
-	4'b0110: begin if(Z == 1'b1) begin // Jump if zero to reg value
-		 	     rSelALU <= 4'b0000;
-		 	     rSelAcc <= 2'b00;
-		 	     rLoadAcc <= 1'b0;
-		 	     rLoadReg <= 1'b0;
-		 	     rLoadPC <= 1'b1;
-		 	     rSelPC <= 1'b1;
-		 	     rIncPC <= 1'b0;
+		end
+		4'b0110: begin if(Z == 1'b1) begin // Jump if zero to reg value
+		 	rSelALU <= 4'b0000;
+		 	rSelAcc <= 2'b00;
+		 	rLoadAcc <= 1'b0;
+		 	rLoadReg <= 1'b0;
+		 	rLoadPC <= 1'b1;
+		 	rSelPC <= 1'b1;
+		 	rIncPC <= 1'b0;
 		 	     //LoadIR
 		        end   
-		 end
-
-	4'b0111: begin if(Z == 1'b1) begin // Jump if zero to immediate
+		end
+		4'b0111: begin if(Z == 1'b1) begin // Jump if zero to immediate
 		 	rSelALU <= 4'b0000;
 		 	rSelAcc <= 2'b00;
 		 	rLoadAcc <= 1'b0;
@@ -128,9 +150,8 @@ begin
 		 	rIncPC <= 1'b0;
 		 	//LoadIR
 		       end
-		 end
-
-	4'b1000: begin if(C == 1'b1) begin // Jump if Carry to reg value
+		end
+		4'b1000: begin if(C == 1'b1) begin // Jump if Carry to reg value
 		 	rSelALU <= 4'b0000;
 		 	rSelAcc <= 2'b00;
 		 	rLoadAcc <= 1'b0;
@@ -140,12 +161,10 @@ begin
 		 	rIncPC <= 1'b0;
 		 	//LoadIR
 		       end
-		 end
-
-	4'b1001: begin // NO CONTENT
-		 end
-
-	4'b1010: begin if(C == 1'b1) begin // Jump if carry to immediate
+		end
+		4'b1001: begin // NO CONTENT
+		end
+		4'b1010: begin if(C == 1'b1) begin // Jump if carry to immediate
 		 	rSelALU <= 4'b0000;
 		 	rSelAcc <= 2'b00;
 		 	rLoadAcc <= 1'b0;
@@ -155,52 +174,57 @@ begin
 		 	rIncPC <= 1'b0;
 		 	//LoadIR
 		       end
-		 end
-
-	4'b1011: begin rSelALU <= 4'b0001; // Shift left
-		 rSelAcc <= 2'b00;
-		 rLoadAcc <= 1'b1;
-		 rLoadReg <= 1'b0;
-		 rLoadPC <= 1'b0;
-		 rSelPC <= 1'b0;
-		 rIncPC <= 1'b1;
+		end
+		4'b1011: begin rSelALU <= 4'b0001; // Shift left
+		 	rSelAcc <= 2'b00;
+		 	rLoadAcc <= 1'b1;
+		 	rLoadReg <= 1'b0;
+		 	rLoadPC <= 1'b0;
+		 	rSelPC <= 1'b0;
+		 	rIncPC <= 1'b1;
 		 //LoadIR will be taken care of in Micro.v
-		 end
-
-	4'b1100: begin rSelALU <= 4'b0011; // Shift right
-		 rSelAcc <= 2'b00;
-		 rLoadAcc <= 1'b1;
-		 rLoadReg <= 1'b0;
-		 rLoadPC <= 1'b0;
-		 rSelPC <= 1'b0;
-		 rIncPC <= 1'b1;
+		end
+		4'b1100: begin rSelALU <= 4'b0011; // Shift right
+		 	rSelAcc <= 2'b00;
+		 	rLoadAcc <= 1'b1;
+		 	rLoadReg <= 1'b0;
+		 	rLoadPC <= 1'b0;
+		 	rSelPC <= 1'b0;
+		 	rIncPC <= 1'b1;
 		 //LoadIR will be taken care of in Micro.v
-		 end 
-
-	4'b1101: begin rSelALU <= 4'b0000; // Load immediate to accumulator
-		 rSelAcc <= 2'b10;
-		 rLoadAcc <= 1'b1;
-		 rLoadReg <= 1'b0;
-		 rLoadPC <= 1'b0;
-		 rSelPC <= 1'b0;
-		 rIncPC <= 1'b1;
+		end 
+		4'b1101: begin rSelALU <= 4'b0000; // Load immediate to accumulator
+		 	rSelAcc <= 2'b10;
+		 	rLoadAcc <= 1'b1;
+		 	rLoadReg <= 1'b0;
+		 	rLoadPC <= 1'b0;
+		 	rSelPC <= 1'b0;
+		 	rIncPC <= 1'b1;
 		 //LoadIR
-		 end
-
-	4'b1110: begin// NO CONTENT
-		 end
-
-	4'b1111: begin rSelALU <= 4'b0000; // HALT
-		 rSelAcc <= 2'b00;
-		 rLoadAcc <= 1'b0;
-		 rLoadReg <= 1'b0;
-		 rLoadPC <= 1'b0;
-		 rSelPC <= 1'b0;
-		 rIncPC <= 1'b0;
+		end
+		4'b1110: begin// NO CONTENT
+		end
+		4'b1111: begin rSelALU <= 4'b0000; // HALT
+		 	rSelAcc <= 2'b00;
+		 	rLoadAcc <= 1'b0;
+		 	rLoadReg <= 1'b0;
+		 	rLoadPC <= 1'b0;
+		 	rSelPC <= 1'b0;
+		 	rIncPC <= 1'b0;
 		 //LoadIR will be taken care of in Micro.v
-		 end
+		end
+        	endcase
+		//rLoadIR <= 1'b1;
+	end
+	2'b10: begin
+	   //rLoadIR <= 1'b0;
+	   rLoadReg <= 1'b0;
+	   rLoadAcc <= 1'b0;
+	   rLoadPC <= 1'b0;
+	end
     endcase
 end
+
 endmodule
 
 

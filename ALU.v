@@ -11,7 +11,7 @@ reg [8:0] r;
 reg rC;
 reg rZ;
 
-always @(a or b or ALU_sel or load_shift) begin
+always @(ALU_sel or load_shift) begin
 	case(ALU_sel) 
 		2'b10: r <= a + b; //ADD
 		2'b11: r <= a - b; //SUB
