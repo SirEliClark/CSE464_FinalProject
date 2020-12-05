@@ -1,4 +1,5 @@
 //program counter
+`timescale 1ns/1ps
 module program_counter(
 output wire [7:0] address,
 

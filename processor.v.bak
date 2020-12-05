@@ -1,4 +1,5 @@
 // 8bit Microprocessor file
+`timescale 1ns/1ps
 module processor(
 output wire [7:0] PC,
 output wire [7:0] ACC,

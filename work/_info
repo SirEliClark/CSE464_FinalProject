@@ -7,196 +7,196 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-dC:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject
+Z0 dC:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject
 vacc
-Z0 !s110 1607126673
+Z1 !s110 1607126822
 !i10b 1
 !s100 @;8nLVLQ4g3BkUPX;L;Ri1
-IlXBnU_b5Z@4KRVQg[:>812
-Z1 VDg1SIo80bB@j0V0VzS_@n1
-Z2 dC:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject
-w1607126177
-8C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/ACC.v
-FC:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/ACC.v
+IJn3@klADO_YI:FL?j1i3h1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1607126764
+8C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/ACC.v
+FC:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/ACC.v
 L0 3
-Z3 OP;L;10.4a;61
+Z4 OP;L;10.4a;61
 r1
 !s85 0
 31
-Z4 !s108 1607126673.000000
-!s107 C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/ACC.v|
-!s90 -reportprogress|300|-work|work|C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/ACC.v|
+Z5 !s108 1607126822.000000
+!s107 C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/ACC.v|
+!s90 -reportprogress|300|-work|work|C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/ACC.v|
 !s101 -O0
 !i113 1
-Z5 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+Z6 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
 vALU
-R0
+R1
 !i10b 1
 !s100 <[3[m>==T;UaKVCB40PGP3
-IIJGj<dHNzcLmad3Q`iFZ30
-R1
+IJRa^L7oC6]LSnO3Gb`WFV0
 R2
-w1607126175
-8C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/ALU.v
-FC:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/ALU.v
-L0 2
+R0
 R3
+8C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/ALU.v
+FC:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/ALU.v
+L0 2
+R4
 r1
 !s85 0
 31
-R4
-!s107 C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/ALU.v|
-!s90 -reportprogress|300|-work|work|C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/ALU.v|
+R5
+!s107 C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/ALU.v|
+!s90 -reportprogress|300|-work|work|C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/ALU.v|
 !s101 -O0
 !i113 1
-R5
+R6
 n@a@l@u
 vcontroller
-R0
+!s110 1607127822
 !i10b 1
 !s100 NNd`D[b?N=H27BJOk_5T<3
-Ia4VClii<FhY<nQKUhB@Vh0
-R1
+I5KOEMSYakbiAZ@5mb@]503
 R2
-w1607126104
-8C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/controller.v
-FC:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/controller.v
-L0 3
+R0
 R3
+8controller.v
+Fcontroller.v
+L0 3
+R4
 r1
 !s85 0
 31
-R4
-!s107 C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/controller.v|
-!s90 -reportprogress|300|-work|work|C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/controller.v|
+!s108 1607127822.000000
+!s107 controller.v|
+!s90 -reportprogress|300|controller.v|
 !s101 -O0
 !i113 1
-R5
+o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
 vController_FSM
-!s110 1607125784
+R1
 !i10b 1
 !s100 ]14Ucd`;aYTU?WRW2A6LP0
-IOfi5A2a@R>`>fiDTXHC4`0
-R1
+IXIUYDF]zXGZfj@^?TJ@dL0
 R2
-w1607123253
-8C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/ControllerFSM.v
-FC:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/ControllerFSM.v
+R0
+w1607126763
+8C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/ControllerFSM.v
+FC:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/ControllerFSM.v
 L0 2
-R3
+R4
 r1
 !s85 0
 31
-!s108 1607125784.000000
-!s107 C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/ControllerFSM.v|
-!s90 -reportprogress|300|-work|work|C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/ControllerFSM.v|
+R5
+!s107 C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/ControllerFSM.v|
+!s90 -reportprogress|300|-work|work|C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/ControllerFSM.v|
 !s101 -O0
 !i113 1
-R5
+R6
 n@controller_@f@s@m
 vIR
-R0
+R1
 !i10b 1
 !s100 CHPSiTaeGBE4l]NzCI94<2
-I`FgOUWF?Rf3]_cC]E:F4H2
-R1
+I@W6j:FT?XDcm?cE9e>F6X3
 R2
-w1607126111
-8C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/IR.v
-FC:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/IR.v
-L0 3
+R0
 R3
+8C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/IR.v
+FC:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/IR.v
+L0 3
+R4
 r1
 !s85 0
 31
-R4
-!s107 C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/IR.v|
-!s90 -reportprogress|300|-work|work|C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/IR.v|
+R5
+!s107 C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/IR.v|
+!s90 -reportprogress|300|-work|work|C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/IR.v|
 !s101 -O0
 !i113 1
-R5
+R6
 n@i@r
 vprocessor
-R0
+R1
 !i10b 1
 !s100 Q]kDV:z_nBkW[he25jzOL3
-IEVECU50XzoKC0<dlS^CAa3
-R1
+IaG3XbYc9>loX8^jCCF9d30
 R2
-w1607126118
-8C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/processor.v
-FC:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/processor.v
-L0 3
+R0
 R3
+8C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/processor.v
+FC:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/processor.v
+L0 3
+R4
 r1
 !s85 0
 31
-R4
-!s107 C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/processor.v|
-!s90 -reportprogress|300|-work|work|C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/processor.v|
+R5
+!s107 C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/processor.v|
+!s90 -reportprogress|300|-work|work|C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/processor.v|
 !s101 -O0
 !i113 1
-R5
+R6
 vprogram_counter
-R0
+Z7 !s110 1607126823
 !i10b 1
 !s100 CGoSHlWAMnKFjeREAjbBI1
-I@3UaAJ3k;8o;6cF44Q;Gm0
-R1
+IKohhfo1OJCe`GXlPP_D0B2
 R2
-w1607126174
-8C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/program_counter.v
-FC:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/program_counter.v
-L0 3
+R0
 R3
+8C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/program_counter.v
+FC:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/program_counter.v
+L0 3
+R4
 r1
 !s85 0
 31
-R4
-!s107 C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/program_counter.v|
-!s90 -reportprogress|300|-work|work|C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/program_counter.v|
+Z8 !s108 1607126823.000000
+!s107 C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/program_counter.v|
+!s90 -reportprogress|300|-work|work|C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/program_counter.v|
 !s101 -O0
 !i113 1
-R5
+R6
 vreg_file
-R0
+R7
 !i10b 1
 !s100 3E3n6Y2XZITEi<KIhmiCM0
-IL6[o^HJF9_>[H`LG;[3^C1
-R1
+IVbJB:?_Kig?9P?R4Mab>f3
 R2
-w1607126173
-8C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/register_file.v
-FC:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/register_file.v
-L0 3
+R0
 R3
+8C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/register_file.v
+FC:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/register_file.v
+L0 3
+R4
 r1
 !s85 0
 31
-R4
-!s107 C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/register_file.v|
-!s90 -reportprogress|300|-work|work|C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/register_file.v|
+R8
+!s107 C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/register_file.v|
+!s90 -reportprogress|300|-work|work|C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/register_file.v|
 !s101 -O0
 !i113 1
-R5
+R6
 vtestbench
-!s110 1607126674
+R7
 !i10b 1
 !s100 <:z9jPgN3_Amk?DL9BGRg2
-I?zik7_NL?Wk1DKDR;5@S82
-R1
+IcBfQ:2WJU``fZ6hbOH8W12
 R2
-w1607125576
-8C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/testbench.v
-FC:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/testbench.v
-L0 3
+R0
 R3
+8C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/testbench.v
+FC:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/testbench.v
+L0 3
+R4
 r1
 !s85 0
 31
-!s108 1607126674.000000
-!s107 C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/testbench.v|
-!s90 -reportprogress|300|-work|work|C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/testbench.v|
+R8
+!s107 C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/testbench.v|
+!s90 -reportprogress|300|-work|work|C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/testbench.v|
 !s101 -O0
 !i113 1
-R5
+R6

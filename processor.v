@@ -1,12 +1,11 @@
 // 8bit Microprocessor file
-`timescale 1ns/1ps
 module processor(
 output wire [7:0] PC,
 output wire [7:0] ACC,
 
 input wire [7:0] INST,
 input wire clk,
-input wire CLB
+input wire CLB,
 
 );
 
@@ -26,7 +25,7 @@ wire wC;
 wire [7:0] wALU_out;
 wire [7:0] wAcc_out;
 
-controller controller0(
+controller dut(
 	// Outputs
 	.LoadIR (wLoadIR),
 	.IncPC (wIncPC),
@@ -41,20 +40,20 @@ controller controller0(
 	.C (wC),
 	.Opcode (wI[7:4]),
 	.clk (clk),
-	.CLB (CLB)
+	.CLB (CLB),
 );
 
-IR IR0(
+IR dut(
 	// Output
 	.I (wI),
 	// Inputs
 	.clk (clk),
 	.CLB (CLB),
 	.LoadIR (wLoadIR),
-	.Instruction (INST)
+	.Instruction (INST),
 );
 
-program_counter program_counter0(
+program_counter dut(
 	// Output
 	.address (PC),
 	// Inputs
@@ -64,10 +63,10 @@ program_counter program_counter0(
 	.clk (clk),
 	.IncPC (wIncPC),
 	.LoadPC (wLoadPC),
-	.selPC (wSelPC)
+	.selPC (wSelPC),
 );
 
-acc ACC0(
+ACC dut(
 	//Output
 	.acc_out(wAcc_out),
 
@@ -81,7 +80,7 @@ acc ACC0(
 	.CLB(CLB)
 );
 
-ALU ALU0(
+ALU dut(
 	//Inputs
 	.a(wAcc_out),
 	.b(wReg),
@@ -94,7 +93,7 @@ ALU ALU0(
 
 );
 
-reg_file reg_file0(
+reg_file dut(
 	// Output
 	.reg_out (wReg),
 	// Inputs
@@ -102,7 +101,7 @@ reg_file reg_file0(
 	.RegAddr (wI[3:0]),
 	.clk (clk),
 	.CLB (CLB),
-	.LoadReg (wLoadReg)
+	.LoadReg (wLoadReg),
 );
 
 endmodule

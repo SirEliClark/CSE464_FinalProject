@@ -1,4 +1,4 @@
-`timescale 1ns/1ps
+
 module ALU (
 input [7:0] a, b,
 input [1:0] ALU_sel, load_shift,
