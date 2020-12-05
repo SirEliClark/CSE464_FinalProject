@@ -36,14 +36,14 @@ always @(posedge clk) begin
 	if (CLB) begin
 		if (counter == 1) begin
 			address <= address + 1;
+			if(expected !== {PC, ACC} || expected === 16'bx) begin
+				$error("INST = %h, expected = %h, recieved = %h\n", INST, expected, {PC, ACC});
+			end
+			else begin
+				$display($time, " correct results INST = %h, result = %h", INST, {PC, ACC});
+			end
 		end
 		counter <= ~counter;
-		if(expected !== {PC, ACC} || expected === 16'bx) begin
-			$error("INST = %h, expected = %h, recieved = %h\n", INST, expected, {PC, ACC});
-		end
-		else begin
-			$display($time, " correct results INST = %h, result = %h", INST, {PC, ACC});
-		end
 	end
 end
 

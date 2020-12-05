@@ -14,21 +14,31 @@ reg rZ;
 always @(ALU_sel or load_shift) begin
 	case(ALU_sel) 
 		2'b10: r <= a + b; //ADD
-		2'b11: r <= a - b; //SUB
+		2'b11: begin 
+			r <= a - b; //SUB
+			if (a < b) begin
+				r[8] <= 1;
+			end
+			end
 		2'b01: r <= ~(a | b); //NOR
 		2'b00: begin
 			case(load_shift)
 				2'b11: r <= a >> 1; //SHR
 				2'b01: r <= a << 1; //SHL
-				2'b10: r <= a; //LD
+				2'b10: begin
+				end//r <= a; //LD
 				2'b00: r <= 0; //RST
 			endcase
 		end
 		/****Complete the code here*****/
 	endcase
+	
+
+end
+
+always @(r) begin
 	rC <= r[8];
 	rZ <= (r[7:0] == 0) ? 1:0;
-
 end
 
 assign cout = rC;//r[8];

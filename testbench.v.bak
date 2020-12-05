@@ -11,6 +11,7 @@ wire [7:0] PC;
 wire [7:0] ACC;
 wire [7:0] INST;
 wire [15:0] expected;
+reg counter; 
 
 assign INST = memory[address][23:16];
 assign expected = memory[address][15:0];
@@ -21,6 +22,7 @@ begin
 	$readmemh("testbench.txt",memory);
 	clk = 0;
 	CLB = 0;
+	counter = 0;
 	address = 0;
 	#10 CLB = 1;
 	#500 $stop;
@@ -32,7 +34,10 @@ end
 
 always @(posedge clk) begin
 	if (CLB) begin
-		address <= address + 1;
+		if (counter == 1) begin
+			address <= address + 1;
+		end
+		counter <= ~counter;
 		if(expected !== {PC, ACC} || expected === 16'bx) begin
 			$error("INST = %h, expected = %h, recieved = %h\n", INST, expected, {PC, ACC});
 		end

@@ -221,6 +221,8 @@ always @(*) begin
 	   rLoadReg <= 1'b0;
 	   rLoadAcc <= 1'b0;
 	   rLoadPC <= 1'b0;
+	   rIncPC <= 1'b0;
+	   rSelALU <= 4'b0000;
 	end
     endcase
 end
