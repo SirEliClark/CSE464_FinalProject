@@ -30,7 +30,7 @@ reg [3:0] rSelALU;
 reg [1:0] state;
 
 assign LoadIR = rLoadIR;
-assign IncPC = ~rLoadIR;
+assign IncPC = rIncPC;
 assign SelPC = rSelPC;
 assign LoadPC = rLoadPC;
 assign LoadReg = rLoadReg;
@@ -221,6 +221,7 @@ always @(*) begin
 	   rLoadReg <= 1'b0;
 	   rLoadAcc <= 1'b0;
 	   rLoadPC <= 1'b0;
+	   rIncPC <= 1'b0;
 	end
     endcase
 end
