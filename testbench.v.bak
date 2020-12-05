@@ -1,18 +1,28 @@
 // 8-bit microprocessor testbench
+`timescale 1ns/1ps
 module testbench
 ();
 
-reg [31:0] Imemory[25:0];
-reg [31:0] Ememory[25:0];
+reg [23:0] memory[23:0];
 reg clk;
 reg [4:0] address;
-wire [
+reg CLB;
+wire [7:0] PC;
+wire [7:0] ACC;
+wire [7:0] INST;
+wire [15:0] expected;
+
+assign INST = memory[address][23:16];
+assign expected = memory[address][15:0];
+//assign ACCEx = memory[address][7:0];
 
 initial
 begin
 	$readmemh("testbench.txt",memory);
 	clk = 0;
+	CLB = 0;
 	address = 0;
+	#10 CLB = 1;
 	#500 $stop;
 end
 
@@ -21,18 +31,25 @@ always begin
 end
 
 always @(posedge clk) begin
-	address <= address + 1;
-	if(expected !== {
+	if (CLB) begin
+		address <= address + 1;
+		if(expected !== {PC, ACC} || expected === 16'bx) begin
+			$error("INST = %h, expected = %h, recieved = %h\n", INST, expected, {PC, ACC});
+		end
+		else begin
+			$display($time, " correct results INST = %h, result = %h", INST, {PC, ACC});
+		end
+	end
 end
 
-Micro dut(
+processor dut(
 	// Outputs
-	.PC (),
-	.ACC (),
+	.PC (PC),
+	.ACC (ACC),
 	// Inputs
-	.INST (),
+	.INST (INST),
 	.clk (clk),
-	.CLB (),
+	.CLB (CLB)
 );
 
 endmodule

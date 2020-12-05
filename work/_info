@@ -7,133 +7,196 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject
+dC:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject
 vacc
-!s110 1607120081
+Z0 !s110 1607126673
 !i10b 1
-!s100 RH6zY[4m3?YgSKbKLYMnA0
-Im1j56:B7IlE>KDhf;39]83
+!s100 @;8nLVLQ4g3BkUPX;L;Ri1
+IlXBnU_b5Z@4KRVQg[:>812
 Z1 VDg1SIo80bB@j0V0VzS_@n1
-R0
-w1607120079
-8ACC.v
-FACC.v
-L0 2
-Z2 OP;L;10.4a;61
+Z2 dC:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject
+w1607126177
+8C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/ACC.v
+FC:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/ACC.v
+L0 3
+Z3 OP;L;10.4a;61
 r1
 !s85 0
 31
-!s108 1607120081.000000
-!s107 ACC.v|
-!s90 -reportprogress|300|ACC.v|
+Z4 !s108 1607126673.000000
+!s107 C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/ACC.v|
+!s90 -reportprogress|300|-work|work|C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/ACC.v|
 !s101 -O0
 !i113 1
-Z3 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+Z5 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
 vALU
-!s110 1607119906
-!i10b 1
-!s100 L=9QO<=W1SH[?5FS`<Ai_3
-IHo^2:m3F?1Xz=LV>]8H8f0
-R1
 R0
-w1607118178
-8ALU.v
-FALU.v
-L0 2
+!i10b 1
+!s100 <[3[m>==T;UaKVCB40PGP3
+IIJGj<dHNzcLmad3Q`iFZ30
+R1
 R2
+w1607126175
+8C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/ALU.v
+FC:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/ALU.v
+L0 2
+R3
 r1
 !s85 0
 31
-!s108 1607119906.000000
-!s107 ALU.v|
-!s90 -reportprogress|300|ALU.v|
+R4
+!s107 C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/ALU.v|
+!s90 -reportprogress|300|-work|work|C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/ALU.v|
 !s101 -O0
 !i113 1
-R3
+R5
 n@a@l@u
+vcontroller
+R0
+!i10b 1
+!s100 NNd`D[b?N=H27BJOk_5T<3
+Ia4VClii<FhY<nQKUhB@Vh0
+R1
+R2
+w1607126104
+8C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/controller.v
+FC:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/controller.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/controller.v|
+!s90 -reportprogress|300|-work|work|C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/controller.v|
+!s101 -O0
+!i113 1
+R5
 vController_FSM
-!s110 1607119899
+!s110 1607125784
 !i10b 1
 !s100 ]14Ucd`;aYTU?WRW2A6LP0
-IdR3:m06PHlIe>c9]`[Gd]3
+IOfi5A2a@R>`>fiDTXHC4`0
 R1
-R0
-w1607119897
-8ControllerFSM.v
-FControllerFSM.v
-L0 2
 R2
+w1607123253
+8C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/ControllerFSM.v
+FC:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/ControllerFSM.v
+L0 2
+R3
 r1
 !s85 0
 31
-!s108 1607119899.000000
-!s107 ControllerFSM.v|
-!s90 -reportprogress|300|ControllerFSM.v|
+!s108 1607125784.000000
+!s107 C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/ControllerFSM.v|
+!s90 -reportprogress|300|-work|work|C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/ControllerFSM.v|
 !s101 -O0
 !i113 1
-R3
+R5
 n@controller_@f@s@m
 vIR
-!s110 1607119910
-!i10b 1
-!s100 2;>PV:OlA7gnP8>a?m4iQ3
-IddNWd3OIWJClL;BYgafG42
-R1
 R0
-Z4 w1607055536
-8IR.v
-FIR.v
-L0 2
+!i10b 1
+!s100 CHPSiTaeGBE4l]NzCI94<2
+I`FgOUWF?Rf3]_cC]E:F4H2
+R1
 R2
+w1607126111
+8C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/IR.v
+FC:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/IR.v
+L0 3
+R3
 r1
 !s85 0
 31
-!s108 1607119910.000000
-!s107 IR.v|
-!s90 -reportprogress|300|IR.v|
-!s101 -O0
-!i113 1
-R3
-n@i@r
-vprogram_counter
-!s110 1607119920
-!i10b 1
-!s100 3Og4g15QLE;@bnl653QVn3
-I11<RNz:08DG_]]@;][a9n2
-R1
-R0
-w1607055653
-8program_counter.v
-Fprogram_counter.v
-L0 2
-R2
-r1
-!s85 0
-31
-!s108 1607119920.000000
-!s107 program_counter.v|
-!s90 -reportprogress|300|program_counter.v|
-!s101 -O0
-!i113 1
-R3
-vreg_file
-!s110 1607119932
-!i10b 1
-!s100 honEI<z<YPm<`m_@AZY_62
-IU_WGDI8UO7Oa3O>@RNVVb0
-R1
-R0
 R4
-8register_file.v
-Fregister_file.v
-L0 2
+!s107 C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/IR.v|
+!s90 -reportprogress|300|-work|work|C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/IR.v|
+!s101 -O0
+!i113 1
+R5
+n@i@r
+vprocessor
+R0
+!i10b 1
+!s100 Q]kDV:z_nBkW[he25jzOL3
+IEVECU50XzoKC0<dlS^CAa3
+R1
 R2
+w1607126118
+8C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/processor.v
+FC:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/processor.v
+L0 3
+R3
 r1
 !s85 0
 31
-!s108 1607119932.000000
-!s107 register_file.v|
-!s90 -reportprogress|300|register_file.v|
+R4
+!s107 C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/processor.v|
+!s90 -reportprogress|300|-work|work|C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/processor.v|
 !s101 -O0
 !i113 1
+R5
+vprogram_counter
+R0
+!i10b 1
+!s100 CGoSHlWAMnKFjeREAjbBI1
+I@3UaAJ3k;8o;6cF44Q;Gm0
+R1
+R2
+w1607126174
+8C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/program_counter.v
+FC:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/program_counter.v
+L0 3
 R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/program_counter.v|
+!s90 -reportprogress|300|-work|work|C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/program_counter.v|
+!s101 -O0
+!i113 1
+R5
+vreg_file
+R0
+!i10b 1
+!s100 3E3n6Y2XZITEi<KIhmiCM0
+IL6[o^HJF9_>[H`LG;[3^C1
+R1
+R2
+w1607126173
+8C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/register_file.v
+FC:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/register_file.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/register_file.v|
+!s90 -reportprogress|300|-work|work|C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/register_file.v|
+!s101 -O0
+!i113 1
+R5
+vtestbench
+!s110 1607126674
+!i10b 1
+!s100 <:z9jPgN3_Amk?DL9BGRg2
+I?zik7_NL?Wk1DKDR;5@S82
+R1
+R2
+w1607125576
+8C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/testbench.v
+FC:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/testbench.v
+L0 3
+R3
+r1
+!s85 0
+31
+!s108 1607126674.000000
+!s107 C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/testbench.v|
+!s90 -reportprogress|300|-work|work|C:/Users/Eli Clark/Documents/Fall_20/CSE_464/FinalProject/CSE464_FinalProject/testbench.v|
+!s101 -O0
+!i113 1
+R5

@@ -1,4 +1,5 @@
 //Accumulator 
+`timescale 1ns/1ps
 module acc(
 
 output wire[7:0] acc_out, 

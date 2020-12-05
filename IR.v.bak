@@ -1,5 +1,4 @@
 //Instruction register
-`timescale 1ns/1ps
 module IR (
 output wire [7:0] I,
 

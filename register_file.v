@@ -1,4 +1,5 @@
 //register file
+`timescale 1ns/1ps
 module reg_file(
 output wire [7:0] reg_out,
 

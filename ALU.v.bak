@@ -4,10 +4,9 @@ input [7:0] a, b,
 input [1:0] ALU_sel, load_shift,
 
 output[7:0] result,
-output cout, zout
+output wire cout, zout
 );
 
-//wire cout, zout;
 reg [8:0] r;
 reg rC;
 reg rZ;
