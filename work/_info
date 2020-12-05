@@ -9,194 +9,194 @@ z2
 cModel Technology
 Z0 dC:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject
 vacc
-Z1 !s110 1607126822
+!s110 1607188410
 !i10b 1
 !s100 @;8nLVLQ4g3BkUPX;L;Ri1
 IJn3@klADO_YI:FL?j1i3h1
-Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1607126764
+Z2 w1607126764
 8C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/ACC.v
 FC:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/ACC.v
 L0 3
-Z4 OP;L;10.4a;61
+Z3 OP;L;10.4a;61
 r1
 !s85 0
 31
-Z5 !s108 1607126822.000000
+!s108 1607188410.000000
 !s107 C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/ACC.v|
 !s90 -reportprogress|300|-work|work|C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/ACC.v|
 !s101 -O0
 !i113 1
-Z6 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+Z4 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
 vALU
-R1
+!s110 1607188411
 !i10b 1
-!s100 <[3[m>==T;UaKVCB40PGP3
-IJRa^L7oC6]LSnO3Gb`WFV0
-R2
+!s100 L=9QO<=W1SH[?5FS`<Ai_3
+IYdfXLAUz_8[j2SbHXIR]f1
+R1
 R0
-R3
+w1607126844
 8C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/ALU.v
 FC:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/ALU.v
 L0 2
-R4
+R3
 r1
 !s85 0
 31
-R5
+!s108 1607188411.000000
 !s107 C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/ALU.v|
 !s90 -reportprogress|300|-work|work|C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/ALU.v|
 !s101 -O0
 !i113 1
-R6
+R4
 n@a@l@u
 vcontroller
-!s110 1607127822
+!s110 1607188413
 !i10b 1
-!s100 NNd`D[b?N=H27BJOk_5T<3
-I5KOEMSYakbiAZ@5mb@]503
-R2
+!s100 VLIM>G[1JgYPm014K:hOX2
+I_X9OS4Bf0M;QXD_DikNAl3
+R1
 R0
-R3
-8controller.v
-Fcontroller.v
+w1607132202
+8C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/controller.v
+FC:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/controller.v
 L0 3
-R4
+R3
 r1
 !s85 0
 31
-!s108 1607127822.000000
-!s107 controller.v|
-!s90 -reportprogress|300|controller.v|
+!s108 1607188413.000000
+!s107 C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/controller.v|
+!s90 -reportprogress|300|-work|work|C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/controller.v|
 !s101 -O0
 !i113 1
-o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+R4
 vController_FSM
-R1
+!s110 1607128721
 !i10b 1
 !s100 ]14Ucd`;aYTU?WRW2A6LP0
 IXIUYDF]zXGZfj@^?TJ@dL0
-R2
+R1
 R0
 w1607126763
 8C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/ControllerFSM.v
 FC:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/ControllerFSM.v
 L0 2
-R4
+R3
 r1
 !s85 0
 31
-R5
+!s108 1607128720.000000
 !s107 C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/ControllerFSM.v|
 !s90 -reportprogress|300|-work|work|C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/ControllerFSM.v|
 !s101 -O0
 !i113 1
-R6
+R4
 n@controller_@f@s@m
 vIR
-R1
+!s110 1607188414
 !i10b 1
 !s100 CHPSiTaeGBE4l]NzCI94<2
 I@W6j:FT?XDcm?cE9e>F6X3
-R2
+R1
 R0
-R3
+R2
 8C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/IR.v
 FC:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/IR.v
 L0 3
-R4
+R3
 r1
 !s85 0
 31
-R5
+!s108 1607188414.000000
 !s107 C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/IR.v|
 !s90 -reportprogress|300|-work|work|C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/IR.v|
 !s101 -O0
 !i113 1
-R6
+R4
 n@i@r
 vprocessor
-R1
+!s110 1607189314
 !i10b 1
-!s100 Q]kDV:z_nBkW[he25jzOL3
-IaG3XbYc9>loX8^jCCF9d30
-R2
+!s100 :hM]dgZa?i8=]Ua^]Y6XH0
+I4Kk4g7C6iJ5I<UdW<YkKT2
+R1
 R0
-R3
+w1607189304
 8C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/processor.v
 FC:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/processor.v
-L0 3
-R4
+L0 2
+R3
 r1
 !s85 0
 31
-R5
+!s108 1607189314.000000
 !s107 C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/processor.v|
 !s90 -reportprogress|300|-work|work|C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/processor.v|
 !s101 -O0
 !i113 1
-R6
+R4
 vprogram_counter
-Z7 !s110 1607126823
+!s110 1607188416
 !i10b 1
-!s100 CGoSHlWAMnKFjeREAjbBI1
-IKohhfo1OJCe`GXlPP_D0B2
-R2
+!s100 3Og4g15QLE;@bnl653QVn3
+IoP=AacCi_SaFZ[bSgbQWU2
+R1
 R0
-R3
+w1607126856
 8C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/program_counter.v
 FC:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/program_counter.v
-L0 3
-R4
+L0 2
+R3
 r1
 !s85 0
 31
-Z8 !s108 1607126823.000000
+!s108 1607188416.000000
 !s107 C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/program_counter.v|
 !s90 -reportprogress|300|-work|work|C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/program_counter.v|
 !s101 -O0
 !i113 1
-R6
+R4
 vreg_file
-R7
+!s110 1607188417
 !i10b 1
 !s100 3E3n6Y2XZITEi<KIhmiCM0
 IVbJB:?_Kig?9P?R4Mab>f3
-R2
+R1
 R0
-R3
+R2
 8C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/register_file.v
 FC:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/register_file.v
 L0 3
-R4
+R3
 r1
 !s85 0
 31
-R8
+!s108 1607188417.000000
 !s107 C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/register_file.v|
 !s90 -reportprogress|300|-work|work|C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/register_file.v|
 !s101 -O0
 !i113 1
-R6
+R4
 vtestbench
-R7
+!s110 1607188418
 !i10b 1
-!s100 <:z9jPgN3_Amk?DL9BGRg2
-IcBfQ:2WJU``fZ6hbOH8W12
-R2
+!s100 YObVK_dkSm;K45I`7G6zZ2
+Ia`OB6K2X>[3DP@B8JDXU`1
+R1
 R0
-R3
+w1607129837
 8C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/testbench.v
 FC:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/testbench.v
 L0 3
-R4
+R3
 r1
 !s85 0
 31
-R8
+!s108 1607188418.000000
 !s107 C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/testbench.v|
 !s90 -reportprogress|300|-work|work|C:/Users/jagui/Documents/CSE464/FinalProject/CSE464_FinalProject/testbench.v|
 !s101 -O0
 !i113 1
-R6
+R4

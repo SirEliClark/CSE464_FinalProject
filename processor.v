@@ -5,7 +5,7 @@ output wire [7:0] ACC,
 
 input wire [7:0] INST,
 input wire clk,
-input wire CLB,
+input wire CLB
 
 );
 
@@ -23,9 +23,8 @@ wire [7:0] wReg;
 wire wZ;
 wire wC;
 wire [7:0] wALU_out;
-wire [7:0] wAcc_out;
 
-controller dut(
+controller controller0(
 	// Outputs
 	.LoadIR (wLoadIR),
 	.IncPC (wIncPC),
@@ -40,20 +39,20 @@ controller dut(
 	.C (wC),
 	.Opcode (wI[7:4]),
 	.clk (clk),
-	.CLB (CLB),
+	.CLB (CLB)
 );
 
-IR dut(
+IR IR0(
 	// Output
 	.I (wI),
 	// Inputs
 	.clk (clk),
 	.CLB (CLB),
 	.LoadIR (wLoadIR),
-	.Instruction (INST),
+	.Instruction (INST)
 );
 
-program_counter dut(
+program_counter program_counter0(
 	// Output
 	.address (PC),
 	// Inputs
@@ -63,12 +62,12 @@ program_counter dut(
 	.clk (clk),
 	.IncPC (wIncPC),
 	.LoadPC (wLoadPC),
-	.selPC (wSelPC),
+	.selPC (wSelPC)
 );
 
-ACC dut(
+acc ACC0(
 	//Output
-	.acc_out(wAcc_out),
+	.acc_out(ACC),
 
 	//Inputs
 	.ALU(wALU_out),
@@ -80,9 +79,9 @@ ACC dut(
 	.CLB(CLB)
 );
 
-ALU dut(
+ALU ALU0(
 	//Inputs
-	.a(wAcc_out),
+	.a(ACC),
 	.b(wReg),
 	.ALU_sel(wSelALU[3:2]),
 	.load_shift(wSelALU[1:0]),
@@ -93,15 +92,15 @@ ALU dut(
 
 );
 
-reg_file dut(
+reg_file reg_file0(
 	// Output
 	.reg_out (wReg),
 	// Inputs
-	.reg_in (wAcc_out),
+	.reg_in (ACC),
 	.RegAddr (wI[3:0]),
 	.clk (clk),
 	.CLB (CLB),
-	.LoadReg (wLoadReg),
+	.LoadReg (wLoadReg)
 );
 
 endmodule

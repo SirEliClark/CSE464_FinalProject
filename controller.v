@@ -38,7 +38,25 @@ assign SelAcc = rSelAcc;
 assign SelALU = rSelALU;
 
 
+
+always @(posedge clk)begin
+	if (CLB ==1'b1) begin
+		rLoadIR <= ~rLoadIR;
+	end
+end
+
 always @(posedge clk or CLB) 
+if(CLB == 1'b0)begin 
+	rLoadIR <= 1'b0;
+	rSelALU <= 4'b0;
+	rSelAcc <= 2'b00;
+	rLoadAcc <= 1'b0;
+	rLoadReg <= 1'b0;
+	rLoadPC <= 1'b0;
+	rSelPC <= 1'b0;
+	rIncPC <= 1'b0;
+end
+else
 begin
     case(Opcode)
 	4'b0000: begin//DO NOTHING
